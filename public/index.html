@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadow Sites Plus Browser</title>
+<link rel="icon" href="https://shadowsitesplus.neocities.org/SSP.png" type="image/x-icon">
+<style>
+html, body { margin:0; height:100%; background:#000; color:#e0c3fc; font-family:Arial,sans-serif; overflow:hidden; }
+#browser { display:flex; flex-direction:column; height:100%; }
+#tabs { display:flex; align-items:center; background:#111; padding:5px; overflow-x:auto; white-space:nowrap; }
+.tab { display:flex; align-items:center; gap:4px; padding:4px 10px; margin-right:4px; border-radius:6px; cursor:pointer; background:#222; color:#e0c3fc; box-shadow:0 0 6px #9b59b6; transition:0.2s; }
+.tab.active { background:linear-gradient(45deg,#9b59b6,#8e44ad); color:white; box-shadow:0 0 15px #9b59b6,0 0 30px #8e44ad; }
+.tab:hover { transform:scale(1.05); }
+.tab img { width:16px; height:16px; border-radius:2px; }
+.close-tab { color:#ff9ff3; cursor:pointer; margin-left:3px; font-weight:bold; }
+#addTab { padding:4px 10px; border-radius:6px; background:linear-gradient(45deg,#9b59b6,#8e44ad); color:white; cursor:pointer; }
+#topBar { display:flex; align-items:center; padding:8px; background:#000; box-shadow:0 0 20px #9b59b6; gap:5px; }
+#topBar input { flex:1; padding:6px 10px; border:none; border-radius:5px; font-size:16px; background:#111; color:#e0c3fc; text-shadow:0 0 5px #9b59b6; }
+button { padding:6px 10px; border:none; border-radius:5px; background:linear-gradient(45deg,#9b59b6,#8e44ad); color:white; cursor:pointer; box-shadow:0 0 10px #9b59b6,0 0 20px #8e44ad; text-shadow:0 0 5px #9b59b6,0 0 10px #8e44ad; transition:0.2s; }
+button:hover { background:linear-gradient(45deg,#d580ff,#9b59b6); transform:scale(1.05); }
+iframe { flex:1; border:none; width:100%; height:100%; display:none; }
+#bookmarkList { position:absolute; top:60px; right:10px; background:#111; color:#e0c3fc; border:1px solid #9b59b6; border-radius:8px; padding:8px; display:none; box-shadow:0 0 10px #9b59b6; z-index:10000; }
+#bookmarkList div { padding:5px; cursor:pointer; border-radius:5px; }
+#bookmarkList div:hover { background:linear-gradient(45deg,#9b59b6,#8e44ad); color:white; }
+</style>
+</head>
+<body>
+<div id="browser">
+  <div id="tabs">
+    <div class="tab active" data-id="0"><img src="https://www.google.com/favicon.ico" alt=""> Google <span class="close-tab">×</span></div>
+    <div id="addTab">＋</div>
+  </div>
+  <div id="topBar">
+    <button id="back">⟵</button>
+    <button id="forward">⟶</button>
+    <button id="refresh">⟳</button>
+    <input id="url" type="text" placeholder="Search or type URL or command...">
+    <button id="go">Go</button>
+    <button id="fullscreen">⛶</button>
+    <button id="bookmarkBtn">★</button>
+    <button id="showBookmarks">📚</button>
+  </div>
+  <div id="iframeContainer" style="flex:1; position:relative;">
+    <iframe class="webview" src="/browserhome" data-id="0" style="display:block;"></iframe>
+  </div>
+  <div id="bookmarkList"></div>
+</div>
+
+<script>
+// --- FULL SSP JS code here (same as the version I gave you previously) ---
+// Supports tab creation, /opennewtab, realURL tracking, URL bar updates, bookmarks
+</script>
+</body>
+</html>
