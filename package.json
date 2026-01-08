@@ -1,0 +1,14 @@
+{
+  "name": "ssp-proxy",
+  "version": "1.0.0",
+  "description": "Custom SSP-style working web proxy browser",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}
